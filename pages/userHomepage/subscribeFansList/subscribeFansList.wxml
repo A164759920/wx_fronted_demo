@@ -1,0 +1,65 @@
+<view class="container">
+  <scroll-view scroll-x class="bg-blue nav">
+        <view class="flex text-center">
+        <view  class="cu-item flex-sub {{index==TabCur?'text-black cur':''}}" wx:for="{{itemsList}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+        {{item.msg}}
+        </view>
+        </view>
+  </scroll-view> 
+
+  <view class="" wx:if="{{TabCur==0}}">
+    <view class="list-item">
+      <view class="item-left">
+        <view class="left-avater"></view>
+      </view>
+      <view class="item-medium">
+        <view class="username">未注册</view>
+        <view class="userinfo">XX大学|大三|男</view>
+      </view>
+      <view class="item-right">
+        <view class="remove-sub">取关</view>
+      </view>
+    </view>
+
+    <view class="list-item">
+      <view class="item-left">
+        <view class="left-avater"></view>
+      </view>
+      <view class="item-medium">
+        <view class="username">未注册</view>
+        <view class="userinfo">XX大学|大三|男</view>
+      </view>
+      <view class="item-right">
+        <view class="remove-sub">取关</view>
+      </view>
+    </view>
+
+    <view class="list-item">
+      <view class="item-left">
+        <view class="left-avater"></view>
+      </view>
+      <view class="item-medium">
+        <view class="username">未注册</view>
+        <view class="userinfo">XX大学|大三|男</view>
+      </view>
+      <view class="item-right">
+        <view class="remove-sub">取关</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="" wx:if="{{TabCur==1}}">
+    <view class="list-item">
+      <view class="item-left">
+        <view class="left-avater"></view>
+      </view>
+      <view class="item-medium">
+        <view class="username">未注册</view>
+        <view class="userinfo">XX大学|大三|男</view>
+      </view>
+      <view class="item-right">
+        <view class="remove-sub">关注</view>
+      </view>
+    </view>
+  </view>
+</view>

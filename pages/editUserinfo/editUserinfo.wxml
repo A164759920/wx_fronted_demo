@@ -1,0 +1,36 @@
+<view class="container">
+<view class="cu-form-group margin-top">
+		<view class="avater">头像</view>
+    <image class="cu-avatar radius bg-gray" src='{{imgUrl[0]}}' mode='aspectFill' bindtap="ChooseImage"
+   ></image>
+</view>
+
+<view class="cu-form-group">
+		<view class="updateNickname">昵称</view>
+		<input  placeholder="请输入..."
+     confirm-type="done" bindinput="getUsername"></input>
+	</view>
+
+<view class="cu-form-group">
+		<view class="title">性别</view>
+		<picker bindchange="selectGender" value="{{Genderindex}}" range="{{gender}}">
+			<view class="picker">
+				{{Genderindex?gender[Genderindex]:'未选择'}}
+			</view>
+		</picker>
+	</view>
+
+  <view class="cu-form-group ">
+		<view class="title">年级</view>
+		<picker bindchange="selectGrade" value="{{Gradeindex}}" range="{{grade}}">
+			<view class="picker">
+				{{Gradeindex?grade[Gradeindex]:'未选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="saveButton">
+    <button class="cu-btn bg-red margin-tb-sm lg">保存更改</button>
+  </view>
+
+
+</view>

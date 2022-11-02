@@ -1,0 +1,40 @@
+{
+  "pages": [
+     "pages/userHomepage/userHomepage",
+    "pages/PersonalEnter/Personal",       
+    
+    "pages/pubLikeItem/pubLikeItem",
+    "pages/userHomepage/detailPage/detailPage",
+    "pages/userHomepage/subscribeFansList/subscribeFansList",
+    "pages/editUserinfo/editUserinfo",
+    "pages/index/index",
+    "pages/logs/logs"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/PersonalEnter/Personal",
+        "text": "主页",
+        "iconPath": "/src/icons/home.png",
+        "selectedIconPath": "/src/icons/home-active.png"
+      },
+      {
+        "pagePath": "pages/PersonalEnter/Personal",
+        "text": "个人中心",
+        "iconPath": "/src/icons/userHomepage.png",
+        "selectedIconPath": "/src/icons/userHomepage-active.png"
+      }
+    ]
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

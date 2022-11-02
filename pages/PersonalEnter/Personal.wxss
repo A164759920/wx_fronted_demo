@@ -1,0 +1,88 @@
+/* pages/Personal.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+
+.container{
+  background-color: cornflowerblue;
+}
+
+.header{
+  background-color: crimson;
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header .header-avater{
+  background-color: darkgreen;
+  width:230rpx ;
+  height: calc(100% - 100rpx);
+}
+
+.header .header-avater .userinfo-avatar{
+  width: 128rpx;
+  height: 128rpx;
+  background-color: white;
+  margin-left: 51rpx ;
+  border-radius: 50%;
+}
+.header .hedaer-userinfo{
+  background-color: darkkhaki;
+  flex-grow: 1;
+  height: calc(100% - 100rpx);
+}
+.hedaer-userinfo .userinfo-top{
+  background-color: teal;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 16px;
+  border-bottom: 5rpx solid lightgray;
+}
+
+.hedaer-userinfo .userinfo-bottom{
+  background-color: thistle;
+  width: 258rpx;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.body{
+  background-color: darkgoldenrod;
+  width: 100%;
+  height: 350rpx;
+  display: flex;
+  flex-wrap: wrap;
+  border:3rpx solid lightgrey;
+}
+
+.body-item{
+  width: 25%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  border-bottom:3rpx solid lightgrey;
+}
+
+.body-item .item-pic{
+  background-color: tomato;
+    width: 66rpx;
+    height: 70rpx;
+}
+.text{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}

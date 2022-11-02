@@ -1,0 +1,40 @@
+<view class="container">
+<view class="pub-header">
+	<view class="cancel-button" bindtap="backTo"> 取消 </view>
+	<view class="pub-button"  bindtap="sendLikeItem">发布</view>
+</view>
+<view class="titleInput">
+	<input type="text" bindinput="getTitleInput" placeholder="请输入标题..." maxlength="15"/>
+	<view class="titleCount">{{titleCount}}/15</view>
+</view>
+<view class="contentInput" style="height:280px">
+	<textarea maxlength="200" style="height:250px"
+	placeholder="请输入不少于10个字内容..."	bindinput="getContentInput"
+	cursor-spacing="15" 	show-confirm-bar="{{false}}"></textarea>
+	<view class="contentCount">{{contentCount}}/200</view>
+</view>
+<view class="picSelector">
+  <view class="cu-bar bg-white" style="min-height:70rpx">
+		<view class="action" style="margin-left:25px;">
+			图片
+		</view>
+		<view class="action" style="margin-right:20px;">
+			{{imgList.length}}/9
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub" >
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image  src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<9}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="footer"></view>
+</view>

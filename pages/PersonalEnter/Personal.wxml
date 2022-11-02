@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="header">
+    <view class="header-avater" bindtap="login">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="login" >授权登录</button>
+          <image wx:else class="userinfo-avatar" src="{{userData.avatarUrl}}"  mode="cover"/>
+    </view>
+    <view class="hedaer-userinfo" >
+      <view class="userinfo-top">
+        <view wx:if="{{userData}}">
+          <view class="username">{{userData.nickName}}</view>
+        </view>
+        <view wx:else>
+          <view class="username">未登录</view>
+        </view>
+        <view class="toPersonal" bindtap="toUserHomepag">个人主页></view>
+      </view>
+      <view class="userinfo-bottom">
+        <view class="subscribe">关注:18</view>
+        <view class="fans">粉丝:20</view>
+      </view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+    <view class="body-item">
+      <view class="item-pic"></view>
+      <view class="item-text"></view>
+    测试1</view>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+page{
+  width: 100%;
+}
+
+.container{
+  width: calc(100% - 10px);
+  background-color: white;
+  margin-left:  5px;
+  margin-right: 5px;
+}
+
+.pub-header{
+  z-index: 999;
+  background-color:whitesmoke;
+  color: white;
+  width: 100%;
+  height: 90rpx;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.pub-button{
+  border-radius: 15%;
+  width: 110rpx;
+  height: 70rpx;
+  background-color: lawngreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25rpx;
+}
+.cancel-button{
+
+  width: 100rpx;
+  height: 70rpx;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.titleInput{
+  margin-top: 90rpx;
+  width: 100%;
+  height:50px;
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+  border-bottom: solid 5px whitesmoke;
+  position: relative;
+}
+.titleCount{
+  position: absolute;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  bottom: 5rpx;
+  right: 10rpx;
+}
+
+.contentInput{
+  width: 100%;
+  height:450rpx;
+  border-bottom: solid 5px whitesmoke;
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+  position: relative;
+}
+.contentCount{
+  position:absolute;
+  bottom: 5rpx;
+  right: 10rpx;
+  width: 100%;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+textarea{
+  font-size: 16px;
+}
+
+.picSelector{
+  width: 100%;
+  background-color: chartreuse;
+}
+/* .bg-img{
+  width: 100px !important;
+  height: 70px !important;
+} */
+
+.footer{
+  border-bottom: solid 5px whitesmoke;
+}

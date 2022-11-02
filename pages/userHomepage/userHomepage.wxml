@@ -1,0 +1,72 @@
+<view class="container">
+    <view class="background-pic">
+    背景图片
+    </view>
+    <view class="body">
+    <image class="userAvater" src="{{userData.avatarUrl}}"></image>
+    <view class="userinfo">
+      <view class="username">{{userData.nickName}}</view>
+      <view class="userprofile">
+      XX大学 | 大三 | 男
+      </view>
+      <view class="user-profile-bottom">
+        <view class="like">
+        <view class="number">96</view>被赞
+        </view>
+        <view class="subscribe" bindtap="toSubFans0">
+          <view class="number">96</view>关注
+        </view>
+        <view class="fans"  bindtap="toSubFans1">
+         <view class="number" >96</view>粉丝
+         </view>
+      </view>
+      <view class="edit-userinfo" bindtap="toEditUserinfo">编辑资料</view>
+    </view>
+    </view>
+    <view class="content">
+      <scroll-view scroll-x class="bg-blue nav">
+      <view class="flex text-center">
+      <view  class="cu-item flex-sub {{index==TabCur?'text-black cur':''}}" wx:for="{{itemsList}}" wx:key='unique' bindtap="tabSelect" data-id="{{index}}">
+      {{item.msg}}
+      </view>
+      </view>
+      </scroll-view> 
+    <view class="like-content" wx:if="{{TabCur==0}}">
+    <view class="defaultText" wx:if="{{likeItem.length==0}}">暂时还没有动态..</view>
+    <view class="like-item" wx:for="{{likeItem}}" wx:key="unique" bindtap="toDetailPage" data-id="{{index}}">
+      <view class="like-item-header">
+        <view class="header-left">
+          <!-- <view class="left-avater"></view> -->
+        <image src="{{item.subAvatar}}" class="left-avater"></image>
+          <!-- <view class="left-username">未注册</view> -->
+          <view class="left-username">{{item.subNickname}}</view>
+        </view>
+        <!-- <view class="header-right">2022/8/12</view> -->
+        <view class="header-right">{{item.pubDate}}</view>
+      </view>
+      <view class="like-item-body">
+        <view class="body-title">{{item.title}}</view>
+        <view class="body-content">
+          <view class="body-content-text">
+            {{item.content}}
+          </view>
+          <view class="body-content-pic">
+            <image class="picItem" src="{{pics}}" wx:key='unique' wx:for="{{item.pic}}" wx:if="{{index<3}}" wx:for-item="pics"></image>
+          </view>
+        </view>
+      </view>
+      <view class="like-item-footer">
+        <view class="footer-like">赞 1</view>
+        <view class="footer-comment">评论 2</view>
+        <view class="footer-more">详情</view>
+      </view>
+     
+    </view>
+
+    </view> 
+    <view class="comment-content" wx:if="{{TabCur==1}}">
+    这是回复页
+    </view> 
+    </view>
+    <view class="pubLikeItem" bindtap="toPubLikeItem">发布动态【测试】</view>
+</view>

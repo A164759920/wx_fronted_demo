@@ -1,0 +1,64 @@
+<view class="container">
+  <view class="header">
+    <image class="header-avatar" src="{{likeItem.subAvatar}}"></image>
+    <view class="header-middle">
+      <view class="header-nickname">{{likeItem.subNickname}}</view>
+      <view class="header-date">{{likeItem.pubDate}}</view>
+    </view>
+    <view class="header-right" bindtap="ChangeFavor">
+      <text wx:if="{{isFavor}}" class="cuIcon-favorfill   text-yellow"></text>
+      <text wx:else class="cuIcon-favor text-grey"></text>
+    </view>
+  </view>
+  <view class="body">
+  <view class="deleteLikeItem" bindtap="deleteLikeItem">
+    <text class="cuIcon-close text-grey"></text>
+  </view>
+  <star setSize='100' bind:myevent="setStarNum"></star>
+    <view class="body-title">{{likeItem.title}}</view>
+    <view class="body-content">{{likeItem.content}}</view>
+      <view class="body-pic">
+         <image  wx:for="{{picList}}" wx:key="unique" class="pic-item" bindtap="viewPic" src="{{item}}" data-id="{{item}}"
+         style="--width--:calc(96% / {{picNum}});--height--:calc(620rpx / {{picNum}})"></image> 
+      </view>
+      <view class="body-interact">
+        <view class="text-gray text-lg">
+              <!-- <text class="cuIcon-attentionfill margin-lr-xs"></text> 10 -->
+              <text class="cuIcon-appreciatefill margin-lr-xs" style="color:{{AppreciateColor}}" bindtap="ChangeAppreciate">{{AppreciateNum}}</text> 
+              <!-- 评论 -->
+              <text class="cuIcon-messagefill margin-lr-xs" bindtap="addComment">{{commentList.length}}</text> 
+            </view>
+      </view>
+  </view>
+
+  <view class="footer">
+    <view class="commentItem" wx:for="{{commentList}}" wx:key='unique'>
+      <view class="userInfo">
+        <image class="userAvatar" src="{{item.pubAvatar}}"></image>
+        <view class="bodyInfo">
+          <view class="userNickname">
+              {{item.pubNickname}}
+            </view>
+        <view class="pubDate">
+              {{item.pubDate}}
+            </view>
+        </view>
+
+        <!-- <view class="userAvatar"></view> -->
+        <view class="deleteButton">
+        <view wx:if="{{item.pubOpenid == UserOpenid}}" class="deleteComment" data-id="{{index}}" bindtap="deleteComment">x</view>
+        </view>
+      </view>
+      <view class="userContent">{{item.pubContent}}</view>
+    </view>
+  </view>
+
+  <!-- <textarea wx:if="{{showComment}}" cursor-spacing="20" fixed="true" focus="{{showComment}}"
+  maxlength="-1"></textarea>  -->
+  <view class="comment" wx:if="{{showComment}}">
+  <textarea class="input" type="text" placeholder="评论" cursor-spacing="20" focus="{{showComment}}" 
+  bindinput="getCommentTxt"
+  auto-height="{{true}}" placeholder-style="font-size:20px;" show-confirm-bar="{{false}}"></textarea>
+  <button class="button" bindtap="sendComment" disabled="{{!canIsend}}">发送</button>
+  </view>
+</view>

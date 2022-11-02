@@ -1,0 +1,7 @@
+<view class="stars" bindtap="setNum">
+  <view wx:for="{{stars}}" wx:key="index" class="starItem" style="--width--:{{setSize}}rpx;--height--:{{setSize}}rpx">
+    <image src="{{item.flag1 == 1 ? item.bgImgL : item.bgfImgL}}" data-index="{{index}}" bindtap='scoreL'>
+    </image>
+    <image src="{{item.flag2 == 1 ? item.bgImgR : item.bgfImgR}}" data-index="{{index}}" bindtap='scoreR'></image>
+  </view>
+</view>

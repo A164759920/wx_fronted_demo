@@ -1,0 +1,224 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  width: calc(100% - 10px);
+  background-color: red;
+  background-color: whitesmoke;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.header{
+  padding-left: 8rpx;
+  width: 100%;
+  height: 180rpx;
+ background-color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header .header-avatar{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  width: 130rpx;
+  height:130rpx;
+  border-radius: 50%;
+}
+.header-middle{
+  flex-grow: 1;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-nickname{
+  font-size: 18px;
+}
+.header-date{
+  margin-top: 3px;
+  font-size: 14px;
+  color: gray;
+}
+.header-right{
+  font-size: 25px;
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 15rpx;
+}
+
+.body{
+  margin-top: 10rpx;
+  background-color:white;
+  margin-bottom: 10rpx;
+  padding: 20rpx;
+  position: relative;
+}
+.body .deleteLikeItem{
+  position: absolute;
+  top: 10rpx;
+  right: 25rpx;
+  font-size: 22px;
+}
+
+.body .body-title{
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15rpx;
+  margin-top: 25rpx;
+  border-bottom: solid 3px whitesmoke;
+}
+
+.body .body-content{
+  width: 100%;
+  /* background-color: chartreuse; */
+  font-size: 16px;
+  word-break: break-all;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10rpx;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+}
+
+.body-pic{
+  display: flex;
+  flex-wrap: wrap;
+}
+.body-pic .pic-item{
+  margin: 5rpx;
+  width: var(--width--);
+  height: var(--height--);
+  background-color: whitesmoke;
+}
+
+.body .body-interact{
+  width: 100%;
+  height: 40rpx;
+}
+
+.text-lg {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+text.cuIcon-appreciatefill{
+  margin-left: calc(100% - 250rpx);
+}
+text.cuIcon-messagefill{
+  margin-left: 50rpx;
+}
+
+.star{
+  background-color: aqua;
+  width: 100%;
+  height: 100px;
+}
+
+.footer{
+  width: 100%;
+  /* background-color: blue; */
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+.commentItem{
+ border-bottom: 5px whitesmoke solid;
+}
+
+.commentItem .userInfo{
+  width: 100%;
+  height: 105rpx;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 5px;
+}
+
+.userInfo .bodyInfo{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* flex-grow: 1; */
+}
+.userInfo .userAvatar{
+  width: 90rpx;
+  height: 90rpx;
+  /* background-color: brown; */
+  border-radius: 50%;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodyInfo .userNickname{
+  font-size: 16px;
+}
+.bodyInfo .pubDate{
+  margin-top: 2px;
+  color: gray;
+  font-size: 13px;
+}
+
+.userInfo .deleteButton{
+  /* margin-right: 8px; */
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.userContent{
+  width: calc(100% - 106rpx);
+  margin-left: 106rpx;
+  margin-right: 15rpx;
+  padding-right: 40rpx;
+  padding-bottom: 20rpx;
+  padding-left: 18rpx;
+  font-size: 15px;
+}
+.deleteComment{
+  background-color:lightgray;
+  color: whitesmoke;
+  text-align:center;
+  line-height: 40rpx;
+  margin-left: 80rpx;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.comment{
+  display: flex;
+  background-color:whitesmoke;
+  width: 100%;
+  /* height: 90rpx; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input{
+  background-color:white;
+  /* height: 29px !important; */
+  line-height: 22px;
+  border-radius: 5%;
+  width: 75%;
+  margin-left: 8rpx;
+  padding-top: 8rpx;
+  padding-left: 8rpx;
+}
+
+.button{
+  background-color: hotpink;
+  height: 33px;
+  width:100rpx;
+  border-radius: 5%;
+  margin-right: 8rpx;
+  line-height: 33px;
+  padding-left: 7px;
+  font-size: 18px;
+}
+
